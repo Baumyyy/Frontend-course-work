@@ -16,7 +16,11 @@ function App() {
           <img src={viteLogo} className="vite" alt="Vite logo" />
         </div>
         <div className="name-badge">
-          <img src="/baumgertner-vaaka-signaali.png" alt="Baumgertner" className="name-logo" />
+          <img
+            src="/baumgertner-vaaka-signaali.png"
+            alt="Baumgertner"
+            className="name-logo"
+          />
         </div>
         <div>
           <h1>Get started</h1>
