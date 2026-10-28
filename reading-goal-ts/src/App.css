@@ -1,0 +1,26 @@
+.reading-goal {
+  position: relative;
+  max-width: 320px;
+  margin: 64px auto;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.reading-goal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: none;
+  background: none;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.reading-goal progress {
+  width: 100%;
+  margin: 16px 0 8px;
+}
