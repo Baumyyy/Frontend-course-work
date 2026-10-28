@@ -1,9 +1,12 @@
 import { useState } from 'react'
 import ReadingGoal from './ReadingGoal'
+import useReadingProgress from './useReadingProgress'
 import './App.css'
 
+const STORAGE_KEY = 'reading-goal-current-page'
+
 function App() {
-  const [currentPage, setCurrentPage] = useState<number>(0)
+  const [currentPage, setCurrentPage] = useReadingProgress(STORAGE_KEY, 0)
   const [isGoalVisible, setIsGoalVisible] = useState<boolean>(true)
 
   function handleReadPages(): void {

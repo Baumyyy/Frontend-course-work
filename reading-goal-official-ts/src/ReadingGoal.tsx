@@ -1,3 +1,5 @@
+import { useEffect, useRef } from 'react'
+
 interface ReadingGoalProps {
   title: string
   goalPages: number
@@ -13,6 +15,12 @@ function ReadingGoal({
   onReadPages,
   onClose,
 }: ReadingGoalProps) {
+  const readButtonRef = useRef<HTMLButtonElement>(null)
+
+  useEffect(() => {
+    readButtonRef.current?.focus()
+  }, [])
+
   return (
     <section className="reading-goal">
       <button
@@ -28,7 +36,7 @@ function ReadingGoal({
       <p>
         {currentPage} / {goalPages} pages
       </p>
-      <button type="button" onClick={onReadPages}>
+      <button type="button" ref={readButtonRef} onClick={onReadPages}>
         Read 10 pages
       </button>
     </section>
